@@ -1,0 +1,37 @@
+﻿@model Student
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <div class="card shadow-sm border-0 overflow-hidden">
+            <div class="card-header bg-primary text-white p-4">
+                <div class="d-flex align-items-center">
+                    <div class="rounded-circle bg-white text-primary d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px;">
+                        <i class="bi bi-person-fill fs-2"></i>
+                    </div>
+                    <div>
+                        <h4 class="mb-0 fw-bold">@Model.Name</h4>
+                        <small class="opacity-75">Student ID: #@Model.Id</small>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body p-4">
+                <div class="row py-2 border-bottom">
+                    <div class="col-4 fw-bold text-muted">Department</div>
+                    <div class="col-8">@Model.Department</div>
+                </div>
+                <div class="row py-2 border-bottom">
+                    <div class="col-4 fw-bold text-muted">Age</div>
+                    <div class="col-8">@Model.Age Years Old</div>
+                </div>
+                <div class="row py-2">
+                    <div class="col-4 fw-bold text-muted">Email</div>
+                    <div class="col-8 text-primary">@Model.Email</div>
+                </div>
+            </div>
+            <div class="card-footer bg-light p-3 text-end">
+                <a asp-action="Index" class="btn btn-outline-secondary btn-sm me-2">Close</a>
+                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning btn-sm">Edit Details</a>
+            </div>
+        </div>
+    </div>
+</div>
